@@ -29,13 +29,26 @@ h1, h2 {
   letter-spacing: 0.96px;
 }
 
-li, input {
+li, input, button, label {
   color: #2E2F42;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
   letter-spacing: 0.64px;
+}
+
+input {
+  display: block;
+  width: 360px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+
+button {
+  font-weight: 500;
+  color: #FFF;
 }
 
 #categories {
@@ -87,10 +100,30 @@ li, input {
 }
 
 #name-input {
-  display: block;
-  width: 360px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  border: 1px solid #808080;
   margin-bottom: 16px;
+}
+
+.login-form {
+  display: inline-flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 8px;
+  background: #FFF;
+}
+
+.login-form > button {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 0px;
+  background: #4E75FF;
+}
+
+.login-form > button:hover,
+.login-form > button:focus {
+  background: #6C8CFF;
 }

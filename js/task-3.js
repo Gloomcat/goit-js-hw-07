@@ -3,5 +3,5 @@ const outputField = document.querySelector('#name-output');
 
 inputField.addEventListener('input', (event) => {
     const content = event.currentTarget.value.trim();
-    outputField.textContent = content ? content : 'Anonymous';
+    outputField.textContent = content === '' ? 'Anonymous' : content;
 });
