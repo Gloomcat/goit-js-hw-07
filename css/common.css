@@ -59,7 +59,7 @@ button {
   align-items: flex-start;
   gap: 24px;
   border-radius: 8px;
-  background: #FFF;
+  background-color: #FFF;
 }
 
 .item {
@@ -110,25 +110,43 @@ button {
   align-items: flex-start;
   gap: 16px;
   border-radius: 8px;
-  background: #FFF;
+  background-color: #FFF;
 }
 
 .login-form > button,
-.widget > button {
+.widget > button,
+button[data-create],
+button[data-destroy] {
   display: flex;
   padding: 8px 16px;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   border: 0px;
-  background: #4E75FF;
+  background-color: #4E75FF;
+}
+
+button[data-create],
+button[data-destroy] {
+  width: 120px;
+}
+
+button[data-destroy] {
+  background-color: #FF4E4E;
 }
 
 .login-form > button:hover,
 .login-form > button:focus,
 .widget > button:hover,
-.widget > button:focus {
-  background: #6C8CFF;
+.widget > button:focus,
+button[data-create]:hover,
+button[data-create]:focus {
+  background-color: #6C8CFF;
+}
+
+button[data-destroy]:hover,
+button[data-destroy]:focus {
+  background-color: #FF7070;
 }
 
 .widget {
@@ -139,10 +157,35 @@ button {
   align-items: center;
   gap: 10px;
   border-radius: 8px;
-  background: #FFF;
+  background-color: #FFF;
 }
 
 .widget > p {
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+#controls, #boxes {
+  display: flex;
+  padding: 32px;
+  min-width: 486px;
+  max-width: 1440px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-radius: 8px;
+  background-color: #F6F6FE;
+}
+
+#controls {
+  margin-bottom: 16px;
+}
+
+#controls > input {
+  display: flex;
+  width: 150px;
+  padding: 8px 8px 8px 60px;
+  justify-content: center;
+  align-items: center;
 }
