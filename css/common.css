@@ -29,7 +29,7 @@ h1, h2 {
   letter-spacing: 0.96px;
 }
 
-li, input, button, label {
+li, input, button, label, p {
   color: #2E2F42;
   font-size: 16px;
   font-style: normal;
@@ -113,7 +113,8 @@ button {
   background: #FFF;
 }
 
-.login-form > button {
+.login-form > button,
+.widget > button {
   display: flex;
   padding: 8px 16px;
   justify-content: center;
@@ -124,6 +125,24 @@ button {
 }
 
 .login-form > button:hover,
-.login-form > button:focus {
+.login-form > button:focus,
+.widget > button:hover,
+.widget > button:focus {
   background: #6C8CFF;
+}
+
+.widget {
+  display: flex;
+  width: 445px;
+  padding: 100px 88px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #FFF;
+}
+
+.widget > p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
