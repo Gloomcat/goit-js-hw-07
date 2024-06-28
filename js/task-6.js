@@ -5,14 +5,17 @@ function getRandomHexColor() {
 }
 
 function createBoxes(amount) {
-    const boxes = document.querySelector('#boxes');
+    let boxElements = [];
     for (let i = 0, j = 30; i < amount; i++, j += 10) {
         const box = document.createElement('div');
         box.style.backgroundColor = getRandomHexColor();
         box.style.width = box.style.height = `${j}px`;
         box.classList.add('box');
-        boxes.append(box);
+        boxElements.push(box);
     }
+
+    const boxes = document.querySelector('#boxes');
+    boxes.append(...boxElements);
 }
 
 function destroyBoxes() {
